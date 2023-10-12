@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from "react";
+//import React, { ChangeEvent} from "react";
 import { Quiz } from "../interfaces/quiz";
 
 import "./QuizCard.css";

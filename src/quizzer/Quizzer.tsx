@@ -30,8 +30,9 @@ export const Quizzer = () => {
         );
     }
 
-    function addQuiz(title: string, body: string) {
-        setQuizzes([...quizzes, newQuiz]);
+    function addQuiz(title: string, body: string) {//fixed this
+        const newQuiz: Quiz = {title:title, body:body,id:quizzes.length, published: false, questionList:[]};
+        setQuizzes([...quizzes, newQuiz ]);
     }
 
     function deleteQuiz(qId: number) {
@@ -44,7 +45,7 @@ export const Quizzer = () => {
     return (
         <div className="quizzer">
             <QuizList
-                quizzes={quizzes}
+                quizzes= {quizzes}
                 editQuiz={editQuiz}
                 deleteQuiz={deleteQuiz}
                 showModal={handleShowModal}
